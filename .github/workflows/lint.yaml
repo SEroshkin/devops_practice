@@ -8,13 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
-      - uses: actions/setup-python@v4
+        uses: actions/setup-python@v4
         with:
-          python-versions: '3.11'
+          python-version: '3.11'
       - name: Install dependencies
-      - run: |
+        run: |
           pip install flake8
       - name: Run Linter
-      - run: |
+        run: |
           flake8 task_1/main.py --max-line-length=88
         
